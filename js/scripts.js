@@ -3,7 +3,10 @@ var Pizza = function(pizzaSize,pizzaTopping){
 this.pizzaSize= pizzaSize;
 this.pizzaTopping = pizzaTopping;
 
+Pizza.prototype.totalCost =function(){
 
+
+}
 
 
 }
@@ -36,5 +39,8 @@ $(document).ready(function(){
     var inputtedpizzaSize = $("input.size").val();
     var inputtedpizzaTopping = $("input.topping").val();
 
-   var myPizza = new Pizza(inputtedpizzaSize,inputtedpizzaTopping);
-   
+    var userTopping= ["cheese","pepperoni","artichoke"];
+    var userSize = ["small","medium","large","extra-large"];
+    var myPizza = new Pizza(inputtedpizzaSize,inputtedpizzaTopping);
+
+    var totalCost = " Total Cost : $" + myPizza.totalCost + ".00";
