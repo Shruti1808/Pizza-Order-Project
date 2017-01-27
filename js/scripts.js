@@ -21,7 +21,7 @@ Pizza.prototype.totalCost =function(){        //Prototype//
   }else if (this.pizzaSize === "extra-large") {
     cost = costOfExtraLargePizza;
   }
-myPizzaTopping.forEach(function(item){
+this.pizzaTopping.forEach(function(item){
   if(item ==="cheese"){     //get pizza cost based on the selected topping//
     cost = cost + costOfCheeseTopping;
   }else if (item ==="artichoke") {
@@ -29,11 +29,11 @@ myPizzaTopping.forEach(function(item){
   }else if (item ==="pepperoni") {
     cost = cost + costOfPepperoniTopping;
   }
+  alert(cost);
   return cost;
+
 })
 }
-
-
 // User-interface logic goes here
 $(document).ready(function(){
   $("form#pizza").submit(function(event){
@@ -47,10 +47,11 @@ $(document).ready(function(){
       $(this.pizzaTopping).val();
       myPizzaTopping.push($(this).val());
     });
-    var myPizza = new Pizza(inputtedpizzaSize,myPizzaTopping[]);  //Create object using constructor//
 
-    var userCost = (" Total Cost : $" + myPizza.totalCost() + ".00"); //Returns total cost to the user//
-    $("#total").text(userCost);
-    $("ul#details").append("<li><span class='details'>" + myPizza.pizzaSize + myPizza.pizzaTopping "</span></li>");)
+    var myPizza = new Pizza(inputtedpizzaSize,myPizzaTopping);  //Create object using constructor//
+
+    var userCost = (" Total Cost : $" + myPizza.totalCost() + ".00");//Returns total cost to the user//
+    $(".totalCost").text(userCost);
+    // $("ul#details").append("<li><span class='details'>" + myPizza.pizzaSize + myPizza.pizzaTopping "</span></li>");)
   })
 })
