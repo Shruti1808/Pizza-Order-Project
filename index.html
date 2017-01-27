@@ -26,30 +26,47 @@
       </ul>
     </div>
     <h3>Add a pizza to your order.</h3>
-    <form>
+    <form id = "pizza">
       <!-- Pick a size  -->
-      <div class="size form-group">
-        <h4>Pie Size:</h4>
-        <label class="checkbox-inline"><input type="radio" name="pie-size" value="small"> Small ($10)</label>
-        <label class="checkbox-inline"><input type="radio" name="pie-size" value="medium" checked> Medium ($15)</label>
-        <label class="checkbox-inline"><input type="radio" name="pie-size" value="large"> Large ($20)</label>
-        <label class="checkbox-inline"><input type="radio" name="pie-size" value="extra large"> Extra Large ($25)</label>
+      <div class="size">
+        <h4>Pizza Size:</h4>
+        <div class="form-group">
+            <label class="checkbox-inline">Small ($10)</label>
+            <input type="radio" name="pizza-size" value="small">
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline">Medium ($15)</label>
+            <input type="radio" name="pizza-size" value="medium" checked>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline">Large ($20)</label>
+            <input type="radio" name="pizza-size" value="large">
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline">Extra Large ($25)</label>
+            <input type="radio" name="pizza-size" value="extra large">
+        </div>
       </div>
       <!-- Pick a topping  -->
       <div class="topping form-group">
         <h4>Add a topping of your choice : </h4>
         <label for="checkbox-inLine">
-          <input type="checkbox" name="cheesetopping" value="cheese">Cheese($2)
+          <input id = "cheese" type="checkbox" name="cheesetopping" value="cheese">Cheese($2)
         </label>
         <label for="checkbox-inLine">
-          <input type="checkbox" name="artichoketopping" value="artichoke">Artichoke($3)
+          <input id ="artichoke" type="checkbox" name="artichoketopping" value="artichoke">Artichoke($3)
         </label>
         <label for="checkbox-inLine">
-          <input type="checkbox" name="pepperonitopping" value="pepperoni">Pepperoni($5)
+          <input id ="pepperoni" type="checkbox" name="pepperonitopping" value="pepperoni">Pepperoni($5)
         </label>
+
+      <button type="submit" class="btn btn-success btn-md">Order Pizza Now!</button>
+      </form>
       </div>
-
-
+      <!-- Total Cost goes here -->
+      <div class="totalCost well">
+        <h3>Total Cost :<span class ="total"></span></h3>
+      </div>
 
     </div>
   </body>
