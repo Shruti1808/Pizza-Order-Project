@@ -24,27 +24,36 @@
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#googleMap">CONTACT</a></li>
       </ul>
+      <div class="input-group col-xs-3 ">
+      <input type="text" class="form-control" placeholder="Search">
+      <div class="input-group-btn">
+        <button class="btn btn-default" type="submit">
+          <i class="glyphicon glyphicon-search"></i>
+        </button>
+      </div>
     </div>
+    </div>
+
     <h3>Add a pizza to your order.</h3>
     <form id = "pizza">
       <!-- Pick a size  -->
       <div class="size">
         <h4>Pizza Size:</h4>
         <div class="form-group">
-            <label class="radio-inline">Small ($10)</label>
-            <input type="radio" name="pizza-size" value="small">
+          <label class="radio-inline">Small ($10)</label>
+          <input type="radio" name="pizza-size" value="small">
         </div>
         <div class="form-group">
-            <label class="radio-inline">Medium ($15)</label>
-            <input type="radio" name="pizza-size" value="medium" checked>
+          <label class="radio-inline">Medium ($15)</label>
+          <input type="radio" name="pizza-size" value="medium" checked>
         </div>
         <div class="form-group">
-            <label class="radio-inline">Large ($20)</label>
-            <input type="radio" name="pizza-size" value="large">
+          <label class="radio-inline">Large ($20)</label>
+          <input type="radio" name="pizza-size" value="large">
         </div>
         <div class="form-group">
-            <label class="radio-inline">Extra Large ($25)</label>
-            <input type="radio" name="pizza-size" value="extra-large">
+          <label class="radio-inline">Extra Large ($25)</label>
+          <input type="radio" name="pizza-size" value="extra-large">
         </div>
       </div>
       <!-- Pick a topping  -->
@@ -60,38 +69,37 @@
           <input id ="pepperoni" type="checkbox" name="topping" value="pepperoni">Pepperoni($5)
         </label>
       </div>
-      <div class="quantity form-group row">
-        <div class="col-xs-2">
-          <label for="quantity">Number of orders ( maximum 5):</label>
-          <input type="number" class="form-control" id="number">
-        </div>
-        </div>
-        <div class="delivery">
-          <h3> Delivery options: </h3>
-          <div class="form-group row">
-            <label for="name" class="col-sm-2 col-form-label ">Name</label>
-            <div class="col-sm-10">
+        <!-- Delivery options goes here -->
+      <div class="delivery">
+        <h3> Delivery options: </h3>
+        <div class="form-group row">
+          <label for="name" class="col-sm-2 col-form-label ">Name</label>
+          <div class="col-sm-10">
             <input type="text" class="form-control name" placeholder="name"></div>
           </div>
           <div class="form-group row">
             <label for="address" class="col-sm-2 col-form-label ">Address</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control address" placeholder="address"></div>
-          </div>
-          <div class="form-group row">
-            <label for="phone" class="col-sm-2 col-form-label ">Contact number</label>
-            <div class="col-sm-10">
-            <input type="number" class="form-control" placeholder="contact number"></div>
+              <input type="text" class="form-control address" placeholder="address"></div>
+            </div>
+            <div class="form-group row">
+              <label for="contact" class="col-sm-2 col-form-label ">Contact number</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" placeholder="contact number"></div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-md">Order Pizza Now!</button>
+          </form>
+          <!-- Total Cost goes here -->
+          <div class="totalCost well">
+            <h3>Total Cost :<span id ="total"></span></h3>
+            <h4>Your order details are: <ul id="details"></ul></h4>
+            <ol>
+              <li>Name:<span id="name"></span></li>
+              <li>Address:<span id="address"></span></li>
+              <li>Contact number:<span id="contact"></span> </li>
+            </ol>
           </div>
         </div>
-        <button type="submit" class="btn btn-success btn-md">Order Pizza Now!</button>
-        </form>
-      <!-- Total Cost goes here -->
-      <div class="totalCost well">
-        <h3>Total Cost :<span id ="total"></span></h3>
-        <h4>Your order details are: <ul id="details"></ul></h4>
-      </div>
-
-    </div>
-  </body>
-  </html>
+      </body>
+      </html>

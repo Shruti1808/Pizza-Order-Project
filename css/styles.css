@@ -1,8 +1,10 @@
 body, html {
   height: 100%
+
 }
 body,h1,h2,h3,h4,h5,h6 {
   font-family: "Amatic SC", sans-serif
+
 }
 
 
@@ -15,7 +17,11 @@ body,h1,h2,h3,h4,h5,h6 {
     background-size:contain;
     background-image: url("/img/pizza2.jpg");
     min-height: 60%;
+
 }
 .size{
   display:inline
+}
+.input-group{
+  float:right;
 }

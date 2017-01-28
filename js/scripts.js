@@ -22,17 +22,16 @@ Pizza.prototype.totalCost =function(){        //Prototype//
     cost = costOfExtraLargePizza;
   }
 this.pizzaTopping.forEach(function(item){
-  if(item ==="cheese"){     //get pizza cost based on the selected topping//
+  if(item ==="cheese"){          //get pizza cost based on the selected topping//
     cost = cost + costOfCheeseTopping;
   }else if (item ==="artichoke") {
     cost = cost + costOfArtichokeTopping;
   }else if (item ==="pepperoni") {
     cost = cost + costOfPepperoniTopping;
   }
-  alert(cost);
-  return cost;
+  })
 
-})
+  return cost;
 }
 // User-interface logic goes here
 $(document).ready(function(){
@@ -51,7 +50,12 @@ $(document).ready(function(){
     var myPizza = new Pizza(inputtedpizzaSize,myPizzaTopping);  //Create object using constructor//
 
     var userCost = (" Total Cost : $" + myPizza.totalCost() + ".00");//Returns total cost to the user//
+
     $(".totalCost").text(userCost);
-    // $("ul#details").append("<li><span class='details'>" + myPizza.pizzaSize + myPizza.pizzaTopping "</span></li>");)
+    $("#details").show();
+    $("#name").text($("input.name").val());
+    $("#address").text($("input.address").val());
+    $("#contact").text($("input.contact").val());
+    
   })
 })
