@@ -56,6 +56,6 @@ $(document).ready(function(){
     $("#name").text($("input.name").val());
     $("#address").text($("input.address").val());
     $("#contact").text($("input.contact").val());
-    
+
   })
 })
