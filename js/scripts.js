@@ -21,14 +21,14 @@ Pizza.prototype.totalCost =function(){        //Prototype//
   }else if (this.pizzaSize === "extra-large") {
     cost = costOfExtraLargePizza;
   }
-this.pizzaTopping.forEach(function(item){
-  if(item ==="cheese"){          //get pizza cost based on the selected topping//
-    cost = cost + costOfCheeseTopping;
-  }else if (item ==="artichoke") {
-    cost = cost + costOfArtichokeTopping;
-  }else if (item ==="pepperoni") {
-    cost = cost + costOfPepperoniTopping;
-  }
+  this.pizzaTopping.forEach(function(item){
+    if(item ==="cheese"){          //get pizza cost based on the selected topping//
+      cost = cost + costOfCheeseTopping;
+    }else if (item ==="artichoke") {
+      cost = cost + costOfArtichokeTopping;
+    }else if (item ==="pepperoni") {
+      cost = cost + costOfPepperoniTopping;
+    }
   })
 
   return cost;

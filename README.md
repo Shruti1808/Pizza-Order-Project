@@ -21,7 +21,7 @@ This project should :
 
 ## Specifications :
  * Allow user to enter their information.
- * Allow the user to choose toppings((cheese, pepperoni, artichoke, anchovy, etc) and size for the pizza they'd like to order.
+ * Allow the user to choose toppings(cheese, pepperoni, artichoke, anchovy, etc) and size for the pizza they'd like to order.
   ** set regular price of different pizza size:
     * Cost of small pizza = $10
     * Cost of medium pizza = $15
